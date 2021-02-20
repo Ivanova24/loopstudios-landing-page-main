@@ -1,86 +1,171 @@
-
 /* ****** Customr Properties ****** */
-$primary-white: hsl(0, 0%, 100%); 
+$primary-white: hsl(0, 0%, 100%);
 $primary-black: hsl(0, 0%, 0%);
-$primary-gray: hsl(0, 0%, 55%); 
-$primary-dark-gray: hsl(0, 0%, 41%); 
-$font-alata:'Alata', sans-serif;
-$font-josefin: 'Josefin Sans', sans-serif;
+$primary-gray: hsl(0, 0%, 55%);
+$primary-dark-gray: hsl(0, 0%, 41%);
+$font-alata: "Alata", sans-serif;
+$font-josefin: "Josefin Sans", sans-serif;
 $link-color: #509ee3;
 
-/* ****** Reser ****** */
+/* ****** Reset ****** */
 html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font: {
-        family:$font-josefin;
-        size: 16px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font: {
+    family: $font-josefin;
+    size: 16px;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  color: $primary-white;
+}
+
+a {
+  color: $link-color;
+  transition: all 0.5s ease-out;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ****** Components ****** */
+
+/* ****** Utilities ****** */
+
+/* ****** Site Styles ****** */
+
+.wrap {
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: center;
+  grid-gap: 9.5rem;
+}
+
+.hero {
+
+  background: {
+    image: url("/images/mobile/image-hero.jpg");
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+  width: 100%;
+  min-height: 100vh;
+  padding: 3.5rem 2rem;
+  display: flex;
+  
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+    z-index: 100;
+    width: 100%;
+
+    figure {
+      width: 60%;
     }
   }
-  
-  *,
-  *::after,
-  *::before {
-    box-sizing: inherit;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+
+  .hero-title {
+    justify-content: center;
+    align-self: center;
     color: $primary-white;
+    border: 2px solid $primary-white;
+    padding: 2rem 2rem 1rem;
+    font-size: 3rem;
+    line-height: 0.95;
+    width: 100%;
+    max-width: 48rem;
   }
   
-  a {
-    color: $link-color;
-    transition: all 0.5s ease-out;
-    &:hover {
-        opacity: 0.75;
+
+}
+
+
+
+@media only screen and (min-width: 750px) {
+
+  .hero {
+    background-image: url("/images/desktop/image-hero.jpg");
+    padding: 5rem 10.5rem;
+
+    .header {
+      padding: 5rem 10.5rem;
+
+      figure {
+        width: 60%;
+      }
     }
   }
-  
-  h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  
-  h2 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
-  h3 {
-    margin: 0;
-    font-size: 1.25rem;
-  }
-  
-  h4 {
-    margin: 0;
-    font-size: 1rem;
-  }
-  
-  h5 {
-    margin: 0;
-    font-size: 0.85rem;
-  }
-  
-  h6 {
-    margin: 0;
-    font-size: 0.7rem;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  p {
-    line-height: 1.6;
-  }
+}
 
-  /* ****** Components ****** */
 
-  /* ****** Utilities ****** */
 
-  /* ****** Site Styles ****** */
-  
+
+
+
+
+
+.footer {
+  background-color: $primary-black;
+}
+
